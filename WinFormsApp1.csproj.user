@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="AllForm\AddCategoryControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\AddDepartmentControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\AddKochmasMulkControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\AddMaishiyProductControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\AddTexProductControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\AdminControllForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\AdminGenerationKeyControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\AdminPanellForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AllForm\AllManagerControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\DepartmentControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\GenerationManagerKey.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\MainAdminControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\MainDeagramControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\MainManagerControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\ManagerControllForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\ManagerPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AllForm\ProductControllForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AllForm\SuperAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
