@@ -15,7 +15,7 @@ namespace OMBORXONA
         public AppDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Database=ombor_guna_baza;Username=postgres;Password=7004");
+            optionsBuilder.UseNpgsql("Host=192.168.1.100;Database=ombor_guna_baza;Username=postgres;Password=123456a");
             return new AppDbContext(optionsBuilder.Options);
         }
     }
