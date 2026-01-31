@@ -19,7 +19,7 @@ namespace WinFormsApp1
             ApplicationConfiguration.Initialize();
 
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Database=ombor_guna_baza;Username=postgres;Password=7004");
+            optionsBuilder.UseNpgsql("Host=192.168.1.100;Database=ombor_guna_baza;Username=postgres;Password=123456a");
 
             var context = new AppDbContext(optionsBuilder.Options);
 
