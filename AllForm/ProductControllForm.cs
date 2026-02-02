@@ -47,7 +47,51 @@ namespace WinFormsApp1.AllForm
 
         private void search_guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
+               string search = search_guna2TextBox1.Text.ToLower();
 
+             if (string.IsNullOrWhiteSpace(search))
+             {
+               guna2DataGridView1.DataSource = null;
+               guna2DataGridView1.DataSource = _currentList;
+               AddDeleteButton();
+               return;
+              }
+
+            List<dynamic> filtered;
+
+         // Ko‘chmas Mulk
+           if (guna2ComboBox1.SelectedIndex == 0)
+           {
+           filtered = _currentList
+               .Where(x =>
+                  (x.productLocation ?? "").ToLower().Contains(search) ||
+                  (x.ProductDescription ?? "").ToLower().Contains(search))
+             .ToList();
+           }
+        // Maishiy Mahsulotlar
+        else if (guna2ComboBox1.SelectedIndex == 1)
+           {
+          filtered = _currentList
+              .Where(x =>
+                 (x.ProductName ?? "").ToLower().Contains(search) ||
+                 (x.locationProduct ?? "").ToLower().Contains(search) ||
+                 (x.ProductDescription ?? "").ToLower().Contains(search))
+             .ToList();
+          }
+          // Texnika
+          else
+          {
+          filtered = _currentList
+              .Where(x =>
+                 (x.ProductName ?? "").ToLower().Contains(search) ||
+                 (x.locationProduct ?? "").ToLower().Contains(search) ||
+                 (x.ProductDescription ?? "").ToLower().Contains(search))
+             .ToList();
+              }
+
+            guna2DataGridView1.DataSource = null;
+            guna2DataGridView1.DataSource = filtered;
+            AddDeleteButton();
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
