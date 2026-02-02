@@ -214,8 +214,49 @@ namespace WinFormsApp1.AllForm
         }
         private void search_guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
+             string search = search_guna2TextBox1.Text.ToLower();
+             string selected = guna2ComboBox1.SelectedItem?.ToString() ?? "";
 
+            if (string.IsNullOrWhiteSpace(search))
+            {
+               guna2DataGridView1.DataSource = null;
+               guna2DataGridView1.DataSource = _currentList;
+               return;
+            }
+
+           List<dynamic> filtered;
+
+          if (selected == "Maishiy-buyumlar")
+          {
+          filtered = _currentList
+            .Where(x =>
+                x.ProductName.ToLower().Contains(search) ||
+                x.ProductDescription.ToLower().Contains(search) ||
+                x.locationProduct.ToLower().Contains(search))
+            .ToList();
+          }
+          else if (selected == "Ko'chmas-mulk")
+          {
+            filtered = _currentList
+             .Where(x =>
+                x.productLocation.ToLower().Contains(search) ||
+                x.ProductDescription.ToLower().Contains(search))
+            .ToList();
+           }
+           else // Texnika-buyumlari
+           {
+            filtered = _currentList
+                .Where(x =>
+                  x.ProductName.ToLower().Contains(search) ||
+                  x.ProductDescription.ToLower().Contains(search) ||
+                  x.locationProduct.ToLower().Contains(search))
+            .ToList();
+           }
+
+         guna2DataGridView1.DataSource = null;
+         guna2DataGridView1.DataSource = filtered;
         }
+        
 
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
