@@ -42,6 +42,14 @@ namespace WinFormsApp1.AllForm
             department_guna2ComboBox1.DataSource = departments;
             department_guna2ComboBox1.DisplayMember = "DepartmentName";
             department_guna2ComboBox1.ValueMember = "Id";
+
+            category_guna2ComboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            category_guna2ComboBox2.IntegralHeight = false;
+            category_guna2ComboBox2.DropDownHeight = 200;
+
+            department_guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            department_guna2ComboBox1.IntegralHeight = false;
+            department_guna2ComboBox1.DropDownHeight = 200;
         }
 
         private void department_guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
